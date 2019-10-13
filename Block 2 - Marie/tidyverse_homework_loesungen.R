@@ -80,7 +80,7 @@ View(dat1) # Kurzer Check, ob alles soweit passt
 # Knifflig ist diesmal, dass wir nicht einfach alle Kreise mit der ID größer irgendwas nehmen können, weil bspw. die kreisfreie Stadt
 # Hamburg auch ein Bundesland ist, hier aber nicht doppelt sondern nur einmal als Bundesland vorkommt. Deshalb ist es hier fehlerrobuster,
 # die Zeilen einzeln rauszunehmen.
-dat1 %<>% filter(ID %in% c("02", "11") | nchar(ID) %in% 5) 
+dat1 %<>% filter(ID %in% c("02", "11") | nchar(ID) %in% 5)
 # Sprich Filter dat1 auf alle Zeilen, die in der ID entweder 02, 01 haben ODER deren ID genau 5 Characterelemente lang ist.
 
 # Datensatz 2 ist eine Excel-Datei. Ich nutze das Paket readxl mit der Funktion read_xlsx, um ihn zu laden. 
